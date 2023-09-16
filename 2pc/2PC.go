@@ -20,18 +20,16 @@ type Coordinator struct {
 }
 
 type Participant struct {
-	index     int
-	data      map[string]string
-	locks     map[string]bool
-	canCommit bool
+	index int
+	data  map[string]string
+	locks map[string]bool
 }
 
 func NewParticipant(index int) *Participant {
 	return &Participant{
-		index:     index,
-		data:      make(map[string]string),
-		locks:     make(map[string]bool),
-		canCommit: true,
+		index: index,
+		data:  make(map[string]string),
+		locks: make(map[string]bool),
 	}
 }
 
